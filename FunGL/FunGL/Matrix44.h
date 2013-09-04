@@ -1,5 +1,7 @@
 #ifndef MATRIX_44_H
 #define MATRIX_44_H
+
+#include <iostream>
 const int COLSIZE = 4;
 const int ROWSIZE = 4;
 #define PI 3.1415926
@@ -29,7 +31,7 @@ public :
 				this->value[i*COLSIZE+j] = m1.value[i*COLSIZE+j];
 	};
 
-	Matrix44 Invert();
+	Matrix44 Invert(bool bRegular = true);
 
 	void Init(MatrixMode mode,int paramNum,double* params);
 	
