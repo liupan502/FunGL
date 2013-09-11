@@ -14,6 +14,7 @@ class Matrix44
 {
 public:
 	double value[16];
+	  
 public :
 	
 	friend	Matrix44 operator+(const Matrix44& m1,const Matrix44& m2);
@@ -33,9 +34,9 @@ public :
 
 	Matrix44 Invert(bool bRegular = true);
 
-	void Init(MatrixMode mode,int paramNum,double* params);
-	
-	
+	void Init(MatrixMode mode,int paramNum,double* params);	
+
+	Matrix44 Identity();
 };
 
 #endif

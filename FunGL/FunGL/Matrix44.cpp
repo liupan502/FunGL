@@ -191,7 +191,7 @@ void RegularInvert(double* srcMatrix,double* resultMatrix)
 		{
 			
 			GetCofactor(rowIndex,colIndex,srcMatrix,tmp,3);
-			double subDet = pow(-1,(rowIndex+colIndex)%2)ComputeDeterminant(3,tmp);
+			double subDet = pow(-1,(double)((rowIndex+colIndex)%2))*ComputeDeterminant(3,tmp);
 			srcMatrix[rowIndex*4+colIndex] = subDet/det;
 		}
 		delete tmp;
@@ -219,7 +219,7 @@ double ComputeDeterminant(int size,double* data)
 		for(int i = 0;i<size;i++)
 		{
 			GetCofactor(0,i,data,tmpData,size-1);
-			det = det+pow(-1,i%2)*ComputeDeterminant(size-1,tmpData);
+			det = det+pow(-1,(double)(i%2))*ComputeDeterminant(size-1,tmpData);
 		}
 		free(tmpData);
 		return det;
@@ -236,4 +236,18 @@ void GetCofactor(int rowIndex,int colIndex,double* src,double *dest,int size)
 		memcpy(dest+i*size,src+i*(size+1),colIndex*sizeof(double));
 		memcpy(dest+i*size+colIndex,src+i*(size+1)+colIndex+1,(size-colIndex)*sizeof(double));
 	}
+}
+
+Matrix44 Identity()
+{
+	Matrix44 result ;
+	for(int i= 0;i<4;i++)
+		for(int j = 0;j<4;j++)
+		{
+			if(i == j)
+				result.value[i*4+j] = 1.0;
+			else
+				result .value[i*4+j] = 0.0;
+		}
+		return result;
 }
