@@ -54,6 +54,29 @@ void Camera::UpdateViewMatrix()
 	}
 	Vector4 cameraXAxis = upDirection.Cross(cameraZAxis);
 	Vector4 cameraYAxis = cameraZAxis.Cross(cameraXAxis);
+	
+	Matrix44 tmpMatrix = Matrix44.Identity();
+	tmpMatrix.value[0] = cameraXAxis.GetX();
+	tmpMatrix.value[1] = cameraXAxis.GetY();
+	tmpMatrix.value[2] = cameraXAxis.GetZ();
+	tmpMatrix.value[3] = cameraXAxis.GetW();
+	tmpMatrix.value[4] = cameraYAxis.GetX();
+	tmpMatrix.value[5] = cameraYAxis.GetY();
+	tmpMatrix.value[6] = cameraYAxis.GetZ();
+	tmpMatrix.value[7] = cameraYAxis.GetW();
+	tmpMatrix.value[8] = cameraZAxis.GetX();
+	tmpMatrix.value[9] = cameraZAxis.GetY();
+	tmpMatrix.value[10] = cameraZAxis.GetZ();
+	tmpMatrix.value[11] = cameraZAxis.GetW();
+	Matrix44 tmpInvert = tmpMatrix.Invert();
+	Matrix44 translationMatrix;
+	double params[3];
+	params[0] = -eyeLocation.GetX();
+	params[1] = -eyeLocation.GetY();
+	params[2] = -eyeLocation.GetZ();
+	translationMatrix.Init(GL_TRANSLATION,3,params);
+	this->viewMatrix = tmpInvert*translationMatrix;
+	
 }
 
 
