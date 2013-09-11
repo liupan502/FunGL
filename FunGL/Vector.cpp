@@ -7,6 +7,13 @@ Vector4::Vector4(double x ,double y,double z,double w)
 	this->SetZ(z);
 	this->SetW(w);
 }
+Vector4::Vector4()
+{
+	this->SetX(0.0);
+	this->SetY(0.0);
+	this->SetZ(0.0);
+	this->SetW(0.0);
+}
 double Vector4 ::GetX()
 {
 	return this->x;

@@ -8,7 +8,8 @@ private:
 	double z;
 	double w;
 public:
-	Vector4(double x = 0.0,double y = 0.0,double z = 0.0,double w = 0.0);
+	Vector4(double x ,double y = 0.0,double z = 0.0,double w = 0.0);
+	Vector4();
 	double GetX();void SetX(double value);
 	double GetY();void SetY(double value);
 	double GetZ();void SetZ(double value);
