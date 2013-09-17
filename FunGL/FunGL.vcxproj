@@ -61,7 +61,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="DisplayObject.h" />
+    <ClInclude Include="LineSegment.h" />
     <ClInclude Include="Matrix44.h" />
+    <ClInclude Include="triangle.h" />
     <ClInclude Include="Vector.h" />
     <ClInclude Include="Vertex.h" />
   </ItemGroup>
