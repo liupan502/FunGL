@@ -1,8 +1,26 @@
 #include "Vertex.h"
 
+
+Vertex::Vertex(Vector4 data)
+{
+	this->poisition = data;
+}
+
+Vertex::Vertex()
+{
+	;
+}
+
+Vertex::Vertex( Vertex& otherVertex)
+{
+	SetColor(otherVertex.GetColor());
+	SetNormal(otherVertex.GetColor());
+	SetPoisition(otherVertex.GetPoisition());
+}
+
 Vector4 Vertex::GetPoisition(void)
 {
-	return this->poisition;
+	return poisition;
 }
 void Vertex::SetPoisition(Vector4 poisition)
 {
@@ -11,7 +29,7 @@ void Vertex::SetPoisition(Vector4 poisition)
 
 Vector4 Vertex::GetColor(void)
 {
-	return this->color;
+	return color;
 }
 
 void Vertex::SetColor(Vector4 color)
@@ -21,11 +39,13 @@ void Vertex::SetColor(Vector4 color)
 
 Vector4 Vertex::GetNormal(void)
 {
-	return this->normal;
+	return normal;
 }
 
 void Vertex::SetNormal(Vector4 normal)
 {
 	this->normal = normal;
 }
+
+
 

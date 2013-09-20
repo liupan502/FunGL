@@ -64,14 +64,16 @@
     <ClInclude Include="DisplayObject.h" />
     <ClInclude Include="LineSegment.h" />
     <ClInclude Include="Matrix44.h" />
-    <ClInclude Include="triangle.h" />
-    <ClInclude Include="Vector.h" />
+    <ClInclude Include="Triangle.h" />
+    <ClInclude Include="VectorUtil.h" />
     <ClInclude Include="Vertex.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="DisplayObject.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Matrix44.cpp" />
+    <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Vector.cpp" />
     <ClCompile Include="Vertex.cpp" />
   </ItemGroup>

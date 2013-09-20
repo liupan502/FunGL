@@ -1,4 +1,4 @@
-#include "Vector.h"
+#include "VectorUtil.h"
 #include "Math.h"
 Vector4::Vector4(double x ,double y,double z,double w)
 {
@@ -119,4 +119,12 @@ bool Vector4::IsParallel(Vector4 v)
 		return true;
 	else
 		return false;
+}
+
+Vector4::Vector4(Vector4& otherVector)
+{
+	this->SetW(otherVector.GetW());
+	this->SetX(otherVector.GetX());
+	this->SetY(otherVector.GetY());
+	this->SetZ(otherVector.GetZ());
 }

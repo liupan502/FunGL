@@ -1,7 +1,7 @@
 #ifndef CAMERA_H
 #define CAEMRA_H
 #include "Matrix44.h"
-#include "Vector.h"
+#include "VectorUtil.h"
 class Camera
 {
 private :
