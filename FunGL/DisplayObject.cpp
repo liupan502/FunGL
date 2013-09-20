@@ -57,7 +57,7 @@ int DisplayObject::AddLines(Vertex* pointsBuf,int pointsNum,bool bStrip)
 int DisplayObject::AddTriangles(Vertex* pointsBuf,int pointsNum,bool bStrip)
 {
 	int addTrianglesNum = 0;
-	/*if(pointsNum < 3)
+	if(pointsNum < 3)
 		return addTrianglesNum;
 	Vertex p1,p2,p3;
 	p1 = pointsBuf[0];
@@ -66,7 +66,7 @@ int DisplayObject::AddTriangles(Vertex* pointsBuf,int pointsNum,bool bStrip)
 	addTrianglesNum = 1;
 	for(;;addTrianglesNum++)
 	{
-		Triangle addTriangle;
+		Triangle triangle;
 		int pointIndex[3];
 		if(bStrip)
 		{
@@ -78,7 +78,7 @@ int DisplayObject::AddTriangles(Vertex* pointsBuf,int pointsNum,bool bStrip)
 				break;
 			p1 = p3;
 			p3 = pointsBuf[addTrianglesNum+2];
-			addTriangle.SetPointsIndex(pointIndex);
+			triangle.SetPointsIndex(pointIndex);
 			triangles.push_back(triangle);
 		}
 		else
@@ -94,16 +94,16 @@ int DisplayObject::AddTriangles(Vertex* pointsBuf,int pointsNum,bool bStrip)
 			p1 = pointsBuf[3*addTrianglesNum];
 			p2 = pointsBuf[3*addTrianglesNum+1];
 			p3 = pointsBuf[3*addTrianglesNum+2];
-			addTriangle.SetPointsIndex(pointIndex);
-			triangles.push_back(addTriangle);
+			triangle.SetPointsIndex(pointIndex);
+			triangles.push_back(triangle);
 		}
-		
+
 	}
 	if(bStrip)
 	{
 		points.push_back(p1);
 		points.push_back(p2);
-	}*/
+	}
 
 	return addTrianglesNum;
 }

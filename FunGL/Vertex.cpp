@@ -11,11 +11,11 @@ Vertex::Vertex()
 	;
 }
 
-Vertex::Vertex( Vertex& otherVertex)
+Vertex::Vertex(const Vertex& otherVertex)
 {
-	SetColor(otherVertex.GetColor());
-	SetNormal(otherVertex.GetColor());
-	SetPoisition(otherVertex.GetPoisition());
+	this->color = otherVertex.color;
+	this->normal = otherVertex.normal;
+	this->poisition = otherVertex.poisition;
 }
 
 Vector4 Vertex::GetPoisition(void)

@@ -16,7 +16,7 @@ private :
 public:
 	Vertex();
 	Vertex(Vector4 data);
-	Vertex(Vertex& otherVertex);
+	Vertex(const Vertex& otherVertex);
 	Vector4 GetPoisition(void);
 	void SetPoisition(Vector4 poisition);
 	Vector4 GetNormal(void);

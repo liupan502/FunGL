@@ -1,47 +1,31 @@
-﻿生成启动时间为 2013/9/20 11:06:27。
+﻿生成启动时间为 2013/9/20 13:08:21。
      1>项目“D:\GitSet\FunGL\FunGL\FunGL.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在对“Debug\FunGL.unsuccessfulbuild”执行 Touch 任务。
        ClCompile:
-         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DisplayObject.cpp Triangle.cpp Vertex.cpp
-         Vertex.cpp
-         正在生成代码...
-         正在编译...
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DisplayObject.cpp LineSegment.cpp
+         LineSegment.cpp
          DisplayObject.cpp
-     1>c:\program files\microsoft visual studio 10.0\vc\include\xmemory(48): error C2558: class“Vertex”: 没有可用的复制构造函数或复制构造函数声明为“explicit”
-                 c:\program files\microsoft visual studio 10.0\vc\include\xmemory(197): 参见对正在编译的函数 模板 实例化“void std::_Construct<Vertex,const _Ty&>(_Ty1 *,_Ty2)”的引用
-                 with
-                 [
-                     _Ty=Vertex,
-                     _Ty1=Vertex,
-                     _Ty2=const Vertex &
-                 ]
-                 c:\program files\microsoft visual studio 10.0\vc\include\xmemory(196): 编译类 模板 成员函数“void std::allocator<_Ty>::construct(Vertex *,const _Ty &)”时
-                 with
-                 [
-                     _Ty=Vertex
-                 ]
-                 c:\program files\microsoft visual studio 10.0\vc\include\vector(421): 参见对正在编译的类 模板 实例化“std::allocator<_Ty>”的引用
-                 with
-                 [
-                     _Ty=Vertex
-                 ]
-                 c:\program files\microsoft visual studio 10.0\vc\include\vector(481): 参见对正在编译的类 模板 实例化“std::_Vector_val<_Ty,_Alloc>”的引用
-                 with
-                 [
-                     _Ty=Vertex,
-                     _Alloc=std::allocator<Vertex>
-                 ]
-                 d:\gitset\fungl\fungl\displayobject.h(8): 参见对正在编译的类 模板 实例化“std::vector<_Ty>”的引用
-                 with
-                 [
-                     _Ty=Vertex
-                 ]
          正在生成代码...
-         正在跳过...(未检测到相关更改)
-         Triangle.cpp
-     1>已完成生成项目“D:\GitSet\FunGL\FunGL\FunGL.vcxproj”(build 个目标)的操作 - 失败。
+       Link:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\GitSet\FunGL\Debug\FunGL.exe" /NOLOGO opencv_calib3d246d.lib opencv_contrib246d.lib opencv_core246d.lib opencv_features2d246d.lib opencv_flann246d.lib opencv_gpu246d.lib opencv_highgui246d.lib opencv_imgproc246d.lib opencv_legacy246d.lib opencv_ml246d.lib opencv_objdetect246d.lib opencv_ts246d.lib opencv_video246d.lib opencv_nonfree246d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\FunGL.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\GitSet\FunGL\Debug\FunGL.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\GitSet\FunGL\Debug\FunGL.lib" /MACHINE:X86 Debug\Camera.obj
+         Debug\DisplayObject.obj
+         Debug\LineSegment.obj
+         Debug\Main.obj
+         Debug\Matrix44.obj
+         Debug\Triangle.obj
+         Debug\Vector.obj
+         Debug\Vertex.obj
+         FunGL.vcxproj -> D:\GitSet\FunGL\Debug\FunGL.exe
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\GitSet\FunGL\Debug\FunGL.exe;#1" /manifest Debug\FunGL.exe.intermediate.manifest
+       CopyFilesToOutputDirectory:
+         正在将文件从“Debug\FunGL.pdb”复制到“D:\GitSet\FunGL\Debug\FunGL.pdb”。
+       FinalizeBuildStatus:
+         正在删除文件“Debug\FunGL.unsuccessfulbuild”。
+         正在对“Debug\FunGL.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\GitSet\FunGL\FunGL\FunGL.vcxproj”(build 个目标)的操作。
 
-生成失败。
+生成成功。
 
-已用时间 00:00:01.75
+已用时间 00:00:02.53

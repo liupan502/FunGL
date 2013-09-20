@@ -6,6 +6,8 @@ private:
 	int pointsIndex[2];
 	double width;
 public :
+	LineSegment();
+	LineSegment(const LineSegment& otherLineSegment);
 	void SetPointsIndex(const int* value);
 	void GetPointsIndex(int* result);
 	void SetWidth(double width);

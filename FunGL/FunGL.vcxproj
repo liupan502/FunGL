@@ -71,6 +71,7 @@
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="DisplayObject.cpp" />
+    <ClCompile Include="LineSegment.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Matrix44.cpp" />
     <ClCompile Include="Triangle.cpp" />
